@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Work — Aurelia Mwangi</title>
+<meta name="description" content="Client websites and personal projects: RIO Furnitures, Kartech Engineering, Ataya Signature, RÛHIA and more.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+<svg class="wavedefs" aria-hidden="true" focusable="false">
+  <filter id="wave" x="-12%" y="-12%" width="124%" height="124%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.0016 0.012" numOctaves="2" seed="7" result="noise">
+      <animate attributeName="baseFrequency" dur="26s" repeatCount="indefinite"
+               values="0.0016 0.012; 0.0032 0.019; 0.0016 0.012"/>
+    </feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="noise" xChannelSelector="R" yChannelSelector="G" scale="22">
+      <animate attributeName="scale" dur="18s" repeatCount="indefinite" values="16;30;16"/>
+    </feDisplacementMap>
+  </filter>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav">
+  <div class="nav__in">
+    <a class="brand" href="index.html">Aurelia<span>.</span></a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <div class="nav__links" id="nav-links"><a href="index.html">Home</a><a href="projects.html" aria-current="page">Work</a><a href="about.html">About</a><a href="journal.html">Journal</a><a href="contact.html">Contact</a></div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <header class="band" style="padding-block:clamp(3rem,7vw,5rem);">
+    <div class="band__glow" aria-hidden="true"></div><div class="band__pattern-back" aria-hidden="true"></div><div class="band__pattern" aria-hidden="true"></div><div class="band__veil" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="label">My projects</p>
+      <div class="hero__rule"></div>
+      <h1 style="font-size:var(--s-3);max-width:16ch;">Selected work and<span class="it"> personal projects.</span></h1>
+      <p class="lede" style="margin-top:1.5rem;color:var(--on-dark-dim);">
+        Client sites, a platform I co-build, and the internal tools that came out
+        of working with workshops.
+      </p>
+    </div>
+  </header>
+
+  <section class="band band--sand" style="padding-block:clamp(2rem,4vw,3rem);">
+    <div class="wrap">
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="websites" aria-pressed="false">Websites</button>
+        <button class="filter" type="button" data-filter="applications" aria-pressed="false">Applications</button>
+        <button class="filter" type="button" data-filter="personal" aria-pressed="false">Personal</button>
+        <button class="filter" type="button" data-filter="concept" aria-pressed="false">Concepts</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="band__glow" aria-hidden="true"></div><div class="band__pattern-back band__pattern-back--soft" aria-hidden="true"></div><div class="band__pattern band__pattern--soft" aria-hidden="true"></div><div class="band__veil" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));">
+        <article class="card" id="rio" data-cats="websites" data-reveal
+             style="min-height:auto;padding:1.6rem;background:var(--charcoal-3);">
+          <span class="card__top">01</span>
+          <div class="shot" style="margin:1.1rem 0 1.3rem;min-height:150px;padding:0;overflow:hidden;"><img src="assets/img/shot-rio.jpg" alt="RIO Furnitures home page" loading="lazy"></div>
+          <h3 style="font-size:var(--s-2);">RIO Furnitures</h3>
+          <p class="card__kind" style="margin-bottom:.9rem;">Furniture showroom · Nairobi</p>
+          <p class="small" style="color:var(--on-dark-dim);">A showroom site with a product catalogue by category, quote requests and site-visit booking. Behind it, an admin dashboard where the owner edits prices and publishes customer reviews without touching code.</p>
+          <ul class="tags"><li>JavaScript</li><li>Supabase</li><li>PostgreSQL</li><li>SEO</li></ul>
+          <div style="display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:auto;"><a class="arrowlink" href="https://riofurniturekenya.com" target="_blank" rel="noopener">Live site <i>&rarr;</i></a><a class="arrowlink" href="case-study-rio.html">Case study <i>&rarr;</i></a><a class="arrowlink" href="https://github.com/sh3wins/rio-furnitures" target="_blank" rel="noopener">GitHub <i>&rarr;</i></a></div>
+        </article><article class="card" id="kartech" data-cats="websites applications" data-reveal
+             style="min-height:auto;padding:1.6rem;background:var(--charcoal-3);">
+          <span class="card__top">02</span>
+          <div class="shot" style="margin:1.1rem 0 1.3rem;min-height:150px;">[Screenshot: Kartech Engineering]</div>
+          <h3 style="font-size:var(--s-2);">Kartech Engineering</h3>
+          <p class="card__kind" style="margin-bottom:.9rem;">Workshop &amp; metalwork · launching</p>
+          <p class="small" style="color:var(--on-dark-dim);">A product-focused sales site for a workshop operating since 2001 — furniture, public waiting seats and stainless steel catering equipment — with orders, custom requests and order tracking on a Supabase backend.</p>
+          <ul class="tags"><li>HTML &amp; CSS</li><li>JavaScript</li><li>Supabase</li></ul>
+          <div style="display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:auto;"><span class="small" style="color:var(--on-dark-dim);">Live demo: [add link once deployed]</span><a class="arrowlink" href="https://github.com/sh3wins/kartech-website" target="_blank" rel="noopener">GitHub <i>&rarr;</i></a></div>
+        </article><article class="card" id="ataya" data-cats="websites" data-reveal
+             style="min-height:auto;padding:1.6rem;background:var(--charcoal-3);">
+          <span class="card__top">03</span>
+          <div class="shot" style="margin:1.1rem 0 1.3rem;min-height:150px;padding:0;overflow:hidden;"><img src="assets/img/shot-ataya.jpg" alt="Ataya Signature home page" loading="lazy"></div>
+          <h3 style="font-size:var(--s-2);">Ataya Signature</h3>
+          <p class="card__kind" style="margin-bottom:.9rem;">Fashion brand · Nairobi</p>
+          <p class="small" style="color:var(--on-dark-dim);">A brand site built around a launch collection and structured so the next collection drops into the same frame rather than needing a rebuild.</p>
+          <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>React</li></ul>
+          <div style="display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:auto;"><a class="arrowlink" href="https://ataya-signature.vercel.app" target="_blank" rel="noopener">Live site <i>&rarr;</i></a><a class="arrowlink" href="https://github.com/sh3wins/ataya-signature" target="_blank" rel="noopener">GitHub <i>&rarr;</i></a></div>
+        </article><article class="card" id="ruhia" data-cats="applications personal" data-reveal
+             style="min-height:auto;padding:1.6rem;background:var(--charcoal-3);">
+          <span class="card__top">04</span>
+          <div class="shot" style="margin:1.1rem 0 1.3rem;min-height:150px;padding:0;overflow:hidden;"><img src="assets/img/shot-ruhia.jpg" alt="RÛHIA home page" loading="lazy"></div>
+          <h3 style="font-size:var(--s-2);">RÛHIA</h3>
+          <p class="card__kind" style="margin-bottom:.9rem;">Fashion platform · since February 2026</p>
+          <p class="small" style="color:var(--on-dark-dim);">A platform connecting styling to the people who actually make the clothes — tailors, fabrics and patterns in one place, with user logins and roles. Built with one other developer.</p>
+          <ul class="tags"><li>Product</li><li>Auth &amp; roles</li></ul>
+          <div style="display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:auto;"><a class="arrowlink" href="https://ruhialab.com" target="_blank" rel="noopener">Live site <i>&rarr;</i></a></div>
+        </article><article class="card" id="workshop" data-cats="applications concept" data-reveal
+             style="min-height:auto;padding:1.6rem;background:var(--charcoal-3);">
+          <span class="card__top">05</span>
+          <div class="shot" style="margin:1.1rem 0 1.3rem;min-height:150px;padding:0;overflow:hidden;"><img src="assets/img/shot-workshop.jpg" alt="Kartech workshop system dashboard" loading="lazy"></div>
+          <h3 style="font-size:var(--s-2);">Workshop Operations</h3>
+          <p class="card__kind" style="margin-bottom:.9rem;">Internal tools · operations</p>
+          <p class="small" style="color:var(--on-dark-dim);">A system that follows a job through the workshop floor — metalwork, fabrication, finishing, loading — and raises an alert when work stops. Built because the owner is on calls all day and a quiet notification gets missed.</p>
+          <ul class="tags"><li>PL/pgSQL</li><li>Supabase</li><li>JavaScript</li></ul>
+          <div style="display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:auto;"><a class="arrowlink" href="https://sh3wins.github.io/kartech-system" target="_blank" rel="noopener">Live demo <i>&rarr;</i></a><a class="arrowlink" href="https://github.com/sh3wins/kartech-system" target="_blank" rel="noopener">GitHub <i>&rarr;</i></a></div>
+        </article><article class="card" id="gaming" data-cats="personal concept" data-reveal
+             style="min-height:auto;padding:1.6rem;background:var(--charcoal-3);">
+          <span class="card__top">06</span>
+          <div class="shot" style="margin:1.1rem 0 1.3rem;min-height:150px;">[Screenshot: Gaming Project]</div>
+          <h3 style="font-size:var(--s-2);">Gaming Project</h3>
+          <p class="card__kind" style="margin-bottom:.9rem;">Personal · in progress</p>
+          <p class="small" style="color:var(--on-dark-dim);">An ongoing build exploring game mechanics and interactive design in the browser. [Add a one-line description once the direction is settled.]</p>
+          <ul class="tags"><li>JavaScript</li><li>[Add stack]</li></ul>
+          <div style="display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:auto;"><span class="small" style="color:var(--on-dark-dim);">In progress — links to follow</span></div>
+        </article>
+      </div>
+      <p class="label" style="text-align:center;margin-top:2.5rem;">More projects coming soon</p>
+    </div>
+  </section>
+
+</main>
+
+<aside class="rail" aria-label="Design system">
+  <div class="rail__head">
+    <p class="rail__title">The pattern</p>
+    <p class="rail__sub">Motion. Flow. Life.</p>
+  </div>
+  <div class="rail__swatch" aria-hidden="true">
+    <div class="band__glow"></div>
+    <div class="band__pattern-back"></div>
+    <div class="band__pattern"></div>
+  </div>
+  <div class="rail__palette">
+    <ul>
+      <li><span class="rail__dot" style="background:#1A1A1A"></span><span class="rail__name">Charcoal<span class="rail__hex">#1A1A1A</span></span></li>
+      <li><span class="rail__dot" style="background:#BB5B35"></span><span class="rail__name">Terracotta<span class="rail__hex">#BB5B35</span></span></li>
+      <li><span class="rail__dot" style="background:#D5A86C"></span><span class="rail__name">Ochre<span class="rail__hex">#D5A86C</span></span></li>
+      <li><span class="rail__dot" style="background:#E5DCC6"></span><span class="rail__name">Sand<span class="rail__hex">#E5DCC6</span></span></li>
+      <li><span class="rail__dot" style="background:#556846"></span><span class="rail__name">Olive<span class="rail__hex">#556846</span></span></li>
+    </ul>
+  </div>
+  <p class="rail__note">Inspired by the land, the wildlife, the city and the movement of life in Nairobi.</p>
+  <div class="rail__tail" aria-hidden="true">
+    <div class="band__glow"></div>
+    <div class="band__pattern-back"></div>
+    <div class="band__pattern"></div>
+  </div>
+</aside>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <h4>Aurelia Mwangi</h4>
+        <p class="small" style="color:var(--on-dark-dim);max-width:26ch;">
+          Frontend developer building for businesses in Nairobi and beyond.
+        </p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Work</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://github.com/sh3wins" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:aureliamwangi3080@gmail.com">Email</a></li>
+          <li><a href="tel:+254746895401">+254 746 895 401</a></li>
+        </ul>
+      </div>
+      <div style="display:flex;align-items:flex-end;justify-content:flex-end;">
+        <p class="foot__sign" style="margin:0;">Au</p>
+      </div>
+    </div>
+    <div class="foot__base">
+      <p style="margin:0;">&copy; <span data-year>2026</span> Aurelia Mwangi &nbsp;·&nbsp; Nairobi, Kenya</p>
+      <p style="margin:0;">Same sky. Bigger dreams.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

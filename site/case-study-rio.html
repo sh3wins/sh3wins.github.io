@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>RIO Furnitures — case study — Aurelia Mwangi</title>
+<meta name="description" content="How I built RIO Furnitures: catalogue, quote requests, admin dashboard and search setup.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+<svg class="wavedefs" aria-hidden="true" focusable="false">
+  <filter id="wave" x="-12%" y="-12%" width="124%" height="124%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.0016 0.012" numOctaves="2" seed="7" result="noise">
+      <animate attributeName="baseFrequency" dur="26s" repeatCount="indefinite"
+               values="0.0016 0.012; 0.0032 0.019; 0.0016 0.012"/>
+    </feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="noise" xChannelSelector="R" yChannelSelector="G" scale="22">
+      <animate attributeName="scale" dur="18s" repeatCount="indefinite" values="16;30;16"/>
+    </feDisplacementMap>
+  </filter>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav">
+  <div class="nav__in">
+    <a class="brand" href="index.html">Aurelia<span>.</span></a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <div class="nav__links" id="nav-links"><a href="index.html">Home</a><a href="projects.html" aria-current="page">Work</a><a href="about.html">About</a><a href="journal.html">Journal</a><a href="contact.html">Contact</a></div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <header class="band" style="padding-block:clamp(3rem,7vw,5rem);">
+    <div class="band__glow" aria-hidden="true"></div><div class="band__pattern-back" aria-hidden="true"></div><div class="band__pattern" aria-hidden="true"></div><div class="band__veil" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="label">Case study</p>
+      <div class="hero__rule"></div>
+      <h1 style="font-size:var(--s-3);">RIO Furnitures</h1>
+      <p class="lede" style="margin-top:1.2rem;color:var(--on-dark-dim);">
+        Seating and tables made to order in a Nairobi workshop — online, and findable.
+      </p>
+      <ul class="tags" style="margin-top:1.5rem;">
+        <li>Web development</li><li>E-commerce</li><li>JavaScript</li><li>Supabase</li><li>PostgreSQL</li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="band band--sand" style="padding-block:clamp(2rem,4vw,3rem);">
+    <div class="wrap">
+      <div class="shot" style="min-height:auto;padding:0;overflow:hidden;border-color:var(--line-light);background:#DAD0B8;"><img src="assets/img/shot-rio.jpg" alt="RIO Furnitures home page" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="band__glow" aria-hidden="true"></div><div class="band__pattern-back band__pattern-back--soft" aria-hidden="true"></div><div class="band__pattern band__pattern--soft" aria-hidden="true"></div><div class="band__veil" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="split" style="grid-template-columns:minmax(0,2fr) minmax(0,.9fr);">
+        <div class="case__body">
+          <div data-reveal>
+            <h3>The problem</h3>
+            <p class="measure small" style="color:var(--on-dark-dim);">
+              RIO makes seating and tables to order for restaurants, bars, offices and
+              outdoor spaces. The work is good and the workshop is busy, but online the
+              business was close to invisible: no site of its own, and an out-of-date
+              Google listing doing the talking. Enquiries arrived one WhatsApp message
+              at a time, each starting from scratch.
+            </p>
+          </div>
+
+          <div data-reveal>
+            <h3>Goals</h3>
+            <ul class="ticks">
+              <li>Show the range properly, with real photographs of real pieces</li>
+              <li>Turn scattered WhatsApp questions into structured quote requests</li>
+              <li>Let the owner update prices and content without calling me</li>
+              <li>Make the business findable in search</li>
+            </ul>
+          </div>
+
+          <div data-reveal>
+            <h3>My role</h3>
+            <p class="measure small" style="color:var(--on-dark-dim);">
+              Sole developer and designer: visual direction, build, database,
+              deployment and domain, plus the product photography and the search
+              and business-listing setup.
+            </p>
+          </div>
+
+          <div data-reveal>
+            <h3>Architecture</h3>
+            <p class="measure small" style="color:var(--on-dark-dim);">
+              A multi-page JavaScript front end deployed on GitHub Pages behind a
+              custom domain, with Supabase (PostgreSQL) holding the data: product and
+              price list, quote requests, site-visit bookings and customer reviews,
+              with auth separating the public site from the admin screens.
+            </p>
+          </div>
+
+          <div data-reveal>
+            <h3>Implementation</h3>
+            <ul class="ticks">
+              <li>Catalogue by category, with piece counts so the range reads at a glance</li>
+              <li>Quote flow capturing contact details and project context up front</li>
+              <li>A site-visit booking page for customers who want to see the workshop</li>
+              <li>Admin dashboard: editable price list, reviews the owner publishes herself</li>
+              <li>Photography shot and prepared in-house, with a made-to-order note on varying pieces</li>
+              <li>Titles, business schema, sitemap and Search Console verification</li>
+            </ul>
+          </div>
+
+          <div data-reveal>
+            <h3>Challenges</h3>
+            <p class="measure small" style="color:var(--on-dark-dim);">
+              Two worth recording. The quote form originally let people submit without
+              usable contact details, which made the lead worthless — fixed by requiring
+              and validating contact information before submit. And the domain went down
+              mid-project after a registrar verification deadline passed; diagnosing that
+              taught me more about DNS than the build did.
+            </p>
+          </div>
+
+          <div data-reveal>
+            <h3>Screenshots</h3>
+            <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));margin-top:1rem;">
+              <div class="shot">[Catalogue page]</div>
+              <div class="shot">[Quote request flow]</div>
+              <div class="shot">[Admin dashboard]</div>
+              <div class="shot">[Mobile view]</div>
+            </div>
+          </div>
+
+          <div data-reveal>
+            <h3>Results</h3>
+            <p class="measure small" style="color:var(--on-dark-dim);">
+              The site is live at riofurniturekenya.com, the business profile is verified
+              and correct, and enquiries now arrive with the information needed to quote.
+            </p>
+            <div class="ph" style="margin-top:1rem;">
+              [Add measurable results once there is data — enquiry volume, search
+              impressions, time saved. No numbers here until they are real.]
+            </div>
+          </div>
+
+          <nav class="pager">
+            <a class="arrowlink" href="projects.html"><i>&larr;</i> All projects</a>
+            <a class="arrowlink" href="projects.html#kartech">Next: Kartech <i>&rarr;</i></a>
+          </nav>
+        </div>
+
+        <aside class="case__aside" data-reveal>
+          <p class="label" style="margin-bottom:1rem;">Project info</p>
+          <dl class="rows">
+            <div><dt>Type</dt><dd>Client website</dd></div>
+            <div><dt>Client</dt><dd>RIO Furnitures</dd></div>
+            <div><dt>Role</dt><dd>Design, build, deploy</dd></div>
+            <div><dt>Stack</dt><dd>JavaScript, Supabase</dd></div>
+            <div><dt>Year</dt><dd>2026</dd></div>
+            <div><dt>Duration</dt><dd>[Add duration]</dd></div>
+          </dl>
+          <p style="margin-top:1.4rem;"><a class="arrowlink" href="https://riofurniturekenya.com" target="_blank" rel="noopener">Visit the site <i>&rarr;</i></a></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<aside class="rail" aria-label="Design system">
+  <div class="rail__head">
+    <p class="rail__title">The pattern</p>
+    <p class="rail__sub">Motion. Flow. Life.</p>
+  </div>
+  <div class="rail__swatch" aria-hidden="true">
+    <div class="band__glow"></div>
+    <div class="band__pattern-back"></div>
+    <div class="band__pattern"></div>
+  </div>
+  <div class="rail__palette">
+    <ul>
+      <li><span class="rail__dot" style="background:#1A1A1A"></span><span class="rail__name">Charcoal<span class="rail__hex">#1A1A1A</span></span></li>
+      <li><span class="rail__dot" style="background:#BB5B35"></span><span class="rail__name">Terracotta<span class="rail__hex">#BB5B35</span></span></li>
+      <li><span class="rail__dot" style="background:#D5A86C"></span><span class="rail__name">Ochre<span class="rail__hex">#D5A86C</span></span></li>
+      <li><span class="rail__dot" style="background:#E5DCC6"></span><span class="rail__name">Sand<span class="rail__hex">#E5DCC6</span></span></li>
+      <li><span class="rail__dot" style="background:#556846"></span><span class="rail__name">Olive<span class="rail__hex">#556846</span></span></li>
+    </ul>
+  </div>
+  <p class="rail__note">Inspired by the land, the wildlife, the city and the movement of life in Nairobi.</p>
+  <div class="rail__tail" aria-hidden="true">
+    <div class="band__glow"></div>
+    <div class="band__pattern-back"></div>
+    <div class="band__pattern"></div>
+  </div>
+</aside>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <h4>Aurelia Mwangi</h4>
+        <p class="small" style="color:var(--on-dark-dim);max-width:26ch;">
+          Frontend developer building for businesses in Nairobi and beyond.
+        </p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Work</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://github.com/sh3wins" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:aureliamwangi3080@gmail.com">Email</a></li>
+          <li><a href="tel:+254746895401">+254 746 895 401</a></li>
+        </ul>
+      </div>
+      <div style="display:flex;align-items:flex-end;justify-content:flex-end;">
+        <p class="foot__sign" style="margin:0;">Au</p>
+      </div>
+    </div>
+    <div class="foot__base">
+      <p style="margin:0;">&copy; <span data-year>2026</span> Aurelia Mwangi &nbsp;·&nbsp; Nairobi, Kenya</p>
+      <p style="margin:0;">Same sky. Bigger dreams.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
